@@ -1,4 +1,11 @@
-trip-planner-js
-===============
+Trip Planner in HTML5
+=====================
 
-Trip Planner with checklists synced to Dropbox implemented in HTML5Something
+Simple trip planner HTML5 web application.
+
+Features:
+
+* 'native' look and feel using jQueryMobile.
+* Syncing with a Dropbox account.
+* Use of Phonegap for native wrappers.
+* Use of localStorage to preserve changes between invocations
