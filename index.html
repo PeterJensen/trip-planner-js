@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<!--
+-- Author: Peter Jensen
+-- Trip planner HTML5 app using jquery and jquery mobile
+-->
+<html>
+<head>
+    <title>Trip Planner</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1 user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="stylesheet"         href="./jquery.mobile-1.2.0.min.css" />
+    <script type="text/javascript" src="./jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="./jquery.mobile-1.2.0.min.js"></script>
+    <script type="text/javascript" src="./dropbox.js"></script>
+    <script type="text/javascript" src="./trip.js"></script>
+    <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+
+<style>
+.trip-corner-none .ui-corner-top {
+    -moz-border-radius:0;
+    -webkit-border-radius:0;
+    border-radius:0;
+}
+.trip-corner-none .ui-corner-bottom {
+    -moz-border-radius:0;
+    -webkit-border-radius:0;
+    border-radius:0;
+}
+.trip-padding-none {
+    padding:0px !important;
+}
+.trip-margin-0 {
+    margin:0px;
+}
+.trip-margin-none {
+    margin:0px !important;
+}
+.trip-padding-53 {
+    padding-right:53px !important;
+}
+.trip-border-none .ui-btn-up-c {
+    border: 0px;
+}
+.trip-border-none .ui-btn-hover-c {
+    border: 0px;
+}
+.trip-border-left-none {
+    border-left-width: 0px;
+}
+.trip-border-right-2 {
+    border-right-width:2px;
+}
+.trip-full-width .ui-controlgroup-controls {
+    width:100%;
+}
+.trip-dialog {
+    padding: 10px 10px;
+}
+.trip-dialog-inner {
+    min-width: 210px;
+}
+.trip-welcome {
+    text-align:center;
+}
+</style>
+
+</head>
+
+<body>
+
+<div data-role="page" id="trip_main" class="ui-page">
+    <div data-role="header" data-position="fixed">
+        <h1 id="trip_name">Trip Planner</h1>
+        <a href="#main_menu" data-rel="popup" data-role="button" data-inline="true">Menu</a>
+        <a href="#" id="trip_refresh" data-icon="refresh" data-role="button">Refresh</a>
+    </div>
+
+<!--    
+    <div id="grid" data-role="content" class="trip-padding-none ui-grid-a">
+    </div>
+-->
+
+    <!-- Popup for adding new item to 'to bring' list -->
+    <div data-role="popup" id="i0new" data-theme="a" class="ui-corner-all">
+        <form id="fbnew">
+            <div class="trip-dialog">
+              <h3>Add Item to Bring</h3>
+              <label for="to_bring_item" class="ui-hidden-accessible">Item</label>
+              <input type="text" name="to_bring_item" id="to_bring_item" value="" placeholder="new item" data-theme="a" />
+              <button type="submit" data-theme="b">OK</button>
+            </div>
+        </form>
+    </div>
+    
+    <!-- Popup for adding new item to 'to do' list -->
+    <div data-role="popup" id="i1new" data-theme="a" class="ui-corner-all">
+        <form id="fdnew">
+            <div class="trip-dialog">
+              <h3>Add item to do</h3>
+              <label for="to_do_item" class="ui-hidden-accessible">Item</label>
+              <input type="text" name="to_do_item" id="to_do_item" value="" placeholder="new item" data-theme="a" />
+              <button type="submit" data-theme="b">OK</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Popup for main menu -->
+    <div data-role="popup" id="main_menu" data-theme="a">
+        <ul data-role="listview" data-inset="true" data-theme="b" class="trip-diaglog-inner">
+            <li><a href="#trip_new" data-rel="popup">New Trip</a></li>
+            <li><a href="#trip_open" data-rel="popup">Open Trip</a></li>
+            <li><a href="#trip_delete" data-rel="popup">Delete Trip</a></li>
+            <li><a href="#trip_save">Save to Dropbox</a></li>
+            <li><a href="#trip_restore">Load from Dropbox</a></li>
+        </ul>
+    </div>
+    
+    <!-- Popup for creating a new trip -->
+    <div data-role="popup" id="trip_new" data-theme="a" class="ui-corner-all">
+        <div class="trip-dialog">
+            <h3>New trip</h3>
+            <input type="text" id="trip_new_name" placeholder="Trip name" data-theme="a" />
+            <ul data-role="listview" data-inset="true" data-theme="b" data-icon="false" class="trip-dialog-inner">
+            </ul>
+        </div>
+    </div>
+
+    <!-- Popup for opening an existing trip -->
+    <div data-role="popup" id="trip_open" data-theme="a" class="ui-corner-all">
+        <div class="trip-dialog">
+            <h3>Open Trip</h3>
+<!--        
+            <ul id="trip_open_list" data-role="listview" data-inset="true" data-theme="b" data-icon="false">
+            </ul>
+-->
+        </div>
+    </div>
+
+    <!-- Popup for deleting an existing trip -->
+    <div data-role="popup" id="trip_delete" data-theme="a" class="ui-corner-all">
+        <div class="trip-dialog trip-dialog-inner">
+            <h3>Delete Trip: <span id="trip_delete_name"></span>?</h3>
+            <input type="button" value="OK" data-theme="b">
+            <input type="button" value="Cancel" data-theme="b">
+        </div>
+    </div>
+
+    <!-- Popup for missing network connection -->
+    <div data-role="popup" id="trip_no_network" data-theme="a" class="ui-corner-all">
+        <div class="trip-dialog trip-dialog-inner">
+            <h3>No Network access!<br />Cannot access Dropbox</h3>
+            <input type="button" value="OK" data-theme="b">
+        </div>
+    </div>
+    
+</div>
+
+<!--
+<div id="log" style="position:fixed; top:500px; left:500px; width:200px; height:300px; border:solid black 1px; z-index:100">
+-->
+</div>
+
+</body>
+</html>

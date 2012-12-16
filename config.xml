@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "com.danishdude.trip"
+        version   = "0.1.0">
+
+    <name>Trip Planner</name>
+    <description>Checklists for trip planning with syncing to Dropbox</description>
+    <author href="http://www.danishdude.com" email="kaptajn.jensen@gmail.com">Peter Jensen</author>
+    <preference name="phonegap-version" value="2.2.0" />
+    <icon src="trip-128.png" />
+    <access origin="*" />
+</widget>
