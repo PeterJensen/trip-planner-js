@@ -3,8 +3,8 @@
   "version": "0.1",
   "manifest_version": 2,
   "description": "A trip planner HTML5 app",
-  "icons": {                     // recommended
-    "128": "trip-128.png" // recommended
+  "icons": {
+    "128": "trip-128.png"
   },
   "browser_action": {
     "default_icon": "trip-128.png",
