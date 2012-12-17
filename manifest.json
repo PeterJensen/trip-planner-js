@@ -2,8 +2,8 @@
   "name": "Trip Planner",
   "version": "0.1",
   "description": "A trip planner HTML5 app",
-  "icons": {                     // recommended
-    "128": "trip-128.png" // recommended
+  "icons": {
+    "128": "trip-128.png"
   },
   "update_url": "http://rt24.intel.com/check_update",
   "app": {
