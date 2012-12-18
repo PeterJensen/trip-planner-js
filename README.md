@@ -5,10 +5,16 @@ Simple trip planner HTML5 web application.
 ## Features
 
 * 'native' look and feel using jQueryMobile.
-* Syncing with a Dropbox account.
 * Use of Phonegap for native wrappers.
 * Use of localStorage to preserve changes between invocations
 * Use of responsive design: 3 destinct layouts for different screen sizes
+* Syncing with a Dropbox account.
+
+## 3 Layouts for multiple screen widths
+
+![iphone](./iphone.png?raw=true)
+![ipad](./ipad.png?raw=true)
+![hosted](./hosted.png?raw=true)
 
 ## Third-party dependencies
 
