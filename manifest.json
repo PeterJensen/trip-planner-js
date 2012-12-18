@@ -4,12 +4,20 @@
   "manifest_version": 2,
   "description": "A trip planner HTML5 app",
   "icons": {
-    "128": "trip-128.png"
+    "128": "trip-128.png" //
   },
-  "browser_action": {
-    "default_icon": "trip-128.png",
-    "default_popup": "index.html",
-    "width": 400
+  "app": {
+     "launch" : {
+        "local_path" : "index.html",
+        "container": "panel"
+     }
+//      "background" : {
+//          "scripts" : [ "background.js" ]
+//      }
+//    "launch": {
+//      "local_path": "index.html",
+//      "container": "window"
+//    }
   },
-    "permissions": ["http://*.dropbox.com/","http://*.dropbox.com/"]
+  "permissions": ["https://*.dropbox.com/", "http://*.dropbox.com/"]
 }
