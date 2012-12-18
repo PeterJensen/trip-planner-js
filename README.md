@@ -1,5 +1,5 @@
 # Trip Planner in HTML5
-![icon](./trip-128.png?raw=true)
+![icon](./trip-128.png?raw=true)  
 Simple trip planner HTML5 web application.
 
 ## Features
@@ -10,8 +10,14 @@ Simple trip planner HTML5 web application.
 * Use of responsive design: 3 destinct layouts for different screen sizes
 * Syncing with a Dropbox account.
 
+## Demo in browser
+
+For a demo in the browser goto [link](http://www.danishdude.com/trip-planner-js/index.html)
+
 ## 3 Layouts for multiple screen widths
 
+These three screen dumps shows the 3 different UIs.  The UI will automatically adapt to the
+available screen size
 ![iphone](./iphone.png?raw=true)
 ![ipad](./ipad.png?raw=true)
 ![hosted](./hosted.png?raw=true)
