@@ -27,6 +27,15 @@ available screen size
 ![ipad](/PeterJensen/trip-planner-js/blob/master/ipad.png?raw=true)
 ![hosted](/PeterJensen/trip-planner-js/blob/master/hosted.png?raw=true)
 
+## Installing as a Chrome hosted app
+
+1. Open up the setting tab
+2. Choose the 'Extensions' panel 
+3. Make sure 'Developer mode' is selected
+4. Click 'Load unpacked extension'
+5. Point to the travel-planner-js directory you downloaded from github
+6. Try the hosted app, by opening up a new tab and pick the Trip Planner app
+
 ## Third-party dependencies
 
 * [Dropbox access](https://github.com/dropbox/dropbox-js): An amazing utility providing a JS API for accessing a DropBox
