@@ -1,5 +1,5 @@
 # Trip Planner in HTML5
-![icon](./trip-128.png?raw=true)  
+![icon](/PeterJensen/trip-planner-js/blob/master/trip-128.png?raw=true)  
 Simple trip planner HTML5 web application.
 
 ## Features
@@ -18,9 +18,9 @@ For a demo in the browser goto [link](http://www.danishdude.com/trip-planner-js/
 
 These three screen dumps shows the 3 different UIs.  The UI will automatically adapt to the
 available screen size
-![iphone](./iphone.png?raw=true)
-![ipad](./ipad.png?raw=true)
-![hosted](./hosted.png?raw=true)
+![iphone](/PeterJensen/trip-planner-js/blob/master/iphone.png?raw=true)
+![ipad](/PeterJensen/trip-planner-js/blob/master/ipad.png?raw=true)
+![hosted](/PeterJensen/trip-planner-js/blob/master/hosted.png?raw=true)
 
 ## Third-party dependencies
 
