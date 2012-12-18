@@ -10,6 +10,10 @@ Simple trip planner HTML5 web application.
 * Use of responsive design: 3 destinct layouts for different screen sizes
 * Syncing with a Dropbox account.
 
+## Demo on YouTube
+
+To watch a video demo click this [link](http://youtu.be/v3O66MKSJ0g)
+
 ## Demo in browser
 
 For a demo in the browser goto [link](http://www.danishdude.com/trip-planner-js/index.html)
