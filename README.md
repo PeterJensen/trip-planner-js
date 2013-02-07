@@ -1,5 +1,5 @@
 # Trip Planner in HTML5
-![icon](/PeterJensen/trip-planner-js/blob/master/trip-128.png?raw=true)  
+![icon](/PeterJensen/trip-planner-js/raw/master/trip-128.png)  
 Simple trip planner HTML5 web application.
 
 ## Features
