@@ -24,8 +24,8 @@ For a demo in the browser goto [link](http://www.danishdude.com/trip-planner-js/
 These three screen dumps shows the 3 different UIs.  The UI will automatically adapt to the
 available screen size
 ![iphone](https://www.github.com/PeterJensen/trip-planner-js/raw/master/iphone.png)
-![ipad](https://www.github.com//PeterJensen/trip-planner-js/raw/master/ipad.png)
-![hosted](https://www.github.com//PeterJensen/trip-planner-js/raw/master/hosted.png)
+![ipad](https://www.github.com/PeterJensen/trip-planner-js/raw/master/ipad.png)
+![hosted](https://www.github.com/PeterJensen/trip-planner-js/raw/master/hosted.png)
 
 ## Installing as a Chrome hosted app
 
